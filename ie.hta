@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Title</title>
+<HTA:APPLICATION
+  BORDER="none"
+  CAPTION="yes"
+  SYSMENU="yes"
+  MAXIMIZEBUTTON="no"
+  MINIMIZEBUTTON="no"
+  SCROLL="yes"
+  CONTEXTMENU="no"
+  SELECTION="no"/>
+</head>
+<script language="VBScript">
+    Sub Window_OnLoad
+        ' Resize and position the window
+        width = 800 : height = 400
+        window.moveTo screen.availWidth\2 - width\2, screen.availHeight\2 - height\2
+        window.resizeTo width, height
+
+        ' Automatically resize the windows after .5 seconds
+        idTimer = window.setTimeout("vbscript:Window_Resize()", 500)
+    End Sub
+	Sub Window_Resize()
+        ' Resize and position the window
+        width = 800 : height = 400
+        window.moveTo screen.availWidth\2 - width\2, screen.availHeight\2 - height\2
+        window.resizeTo width, height
+    End Sub
+</script>
+<body>
+<span style="line-height:1.5; font-family:Arial; font-size:36px;">test<span style="border-bottom: 3px double; font-weight: bold;">test</span>test<span style="font-weight: bold; color:red;">test</span>test</span>
+<center><input type="Button" onClick="vbscript:window.close" value="OK" /></center>
+</body>
+</html>
